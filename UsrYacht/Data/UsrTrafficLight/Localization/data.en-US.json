@@ -24,36 +24,17 @@
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "ColumnName": "Id",
-          "Value": "88e1bc91-6221-41d7-b245-9d7d5d5aa7ea"
-        },
-        {
-          "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
-          "ColumnName": "Name",
-          "Value": "1. Red"
-        },
-        {
-          "SchemaColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
-          "ColumnName": "Description",
-          "Value": "HH"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "ColumnName": "Id",
           "Value": "e2d44858-bcfc-4ba5-b7a2-b9c37733c74e"
         },
         {
           "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
           "ColumnName": "Name",
-          "Value": "2. Yellow"
+          "Value": "2. YELLOW"
         },
         {
           "SchemaColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
           "ColumnName": "Description",
-          "Value": "FFF"
+          "Value": "UPDATE"
         }
       ]
     }

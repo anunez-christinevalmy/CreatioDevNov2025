@@ -426,11 +426,6 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="CrtCopilotStudio">
-			<HintPath>$(RelativePkgFolderPath)/CrtCopilotStudio/$(StandalonePackageAssemblyPath)/CrtCopilotStudio.dll</HintPath>
-			<SpecificVersion>False</SpecificVersion>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="CrtComponentCopilot">
 			<HintPath>$(RelativePkgFolderPath)/CrtComponentCopilot/$(StandalonePackageAssemblyPath)/CrtComponentCopilot.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -496,6 +491,11 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="CrtCopilotStudio">
+			<HintPath>$(RelativePkgFolderPath)/CrtCopilotStudio/$(StandalonePackageAssemblyPath)/CrtCopilotStudio.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtProductivityMobile">
 			<HintPath>$(RelativePkgFolderPath)/CrtProductivityMobile/$(StandalonePackageAssemblyPath)/CrtProductivityMobile.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -531,6 +531,11 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="CrtCustomer360Mobile">
+			<HintPath>$(RelativePkgFolderPath)/CrtCustomer360Mobile/$(StandalonePackageAssemblyPath)/CrtCustomer360Mobile.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtTechnicalUsers">
 			<HintPath>$(RelativePkgFolderPath)/CrtTechnicalUsers/$(StandalonePackageAssemblyPath)/CrtTechnicalUsers.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -551,6 +556,11 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="CrtCustomer360App">
+			<HintPath>$(RelativePkgFolderPath)/CrtCustomer360App/$(StandalonePackageAssemblyPath)/CrtCustomer360App.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
 		<Reference Include="CrtSpecification">
 			<HintPath>$(RelativePkgFolderPath)/CrtSpecification/$(StandalonePackageAssemblyPath)/CrtSpecification.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -563,6 +573,16 @@
 		</Reference>
 		<Reference Include="CrtTechUserCreatioResKitUtility">
 			<HintPath>$(RelativePkgFolderPath)/CrtTechUserCreatioResKitUtility/$(StandalonePackageAssemblyPath)/CrtTechUserCreatioResKitUtility.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtC360InUiV2">
+			<HintPath>$(RelativePkgFolderPath)/CrtC360InUiV2/$(StandalonePackageAssemblyPath)/CrtC360InUiV2.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtCustomer360AI">
+			<HintPath>$(RelativePkgFolderPath)/CrtCustomer360AI/$(StandalonePackageAssemblyPath)/CrtCustomer360AI.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>

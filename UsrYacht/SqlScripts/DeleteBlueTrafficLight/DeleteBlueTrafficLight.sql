@@ -1,0 +1,1 @@
+delete from UsrTrafficLight where Name = '1. RED'
