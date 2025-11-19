@@ -87,7 +87,21 @@ define("UsrYacht_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							"caption": "#ResourceString(PDS_CreatedBy)#",
 							"dataValueType": 10
 						}
-					]
+					],
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						},
+						"editable": {
+							"enable": false,
+							"itemsCreation": false,
+							"floatingEditPanel": false
+						}
+					},
+					"visible": true
 				}
 			},
 			{
