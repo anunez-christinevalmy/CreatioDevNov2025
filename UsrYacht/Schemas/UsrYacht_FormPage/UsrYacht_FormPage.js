@@ -40,6 +40,64 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
+				"name": "Button_lrsbchp",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_lrsbchp_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "actions-button-icon",
+					"menuItems": [],
+					"clickMode": "menu"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_0tb49dz",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_0tb49dz_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrCalcAverageTicketPriceProcess",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "YachtIdParameter"
+						}
+					},
+					"icon": "database-icon"
+				},
+				"parentName": "Button_lrsbchp",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "RunMaxPriceWebService",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(RunMaxPriceWebService_caption)#",
+					"visible": true,
+					"icon": "sum-icon",
+					"clicked": {
+						"request": "crt.RunWebServiceRequest"
+					}
+				},
+				"parentName": "Button_lrsbchp",
+				"propertyName": "menuItems",
+				"index": 1
+			},
+			{
+				"operation": "insert",
 				"name": "PushMeButton",
 				"values": {
 					"type": "crt.Button",
@@ -57,7 +115,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -1027,7 +1085,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 		                request.attributeName === "PDS_UsrPrice_vymige3" ||   // if price changed
 		                request.attributeName === "PDS_UsrPassengersCount_wewu8j1"   // or Passengers count changed
 		            ) {
-						debugger;
+						/*debugger;*/
 		                let price = await request.$context.PDS_UsrPrice_vymige3;
 		                let passengers = await request.$context.PDS_UsrPassengersCount_wewu8j1;
 		                let ticket_price = price / passengers;
@@ -1036,7 +1094,41 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					/* Call the next handler if it exists and return its result. */
 		            return next?.handle(request);
 		        }
-		    }
+		    },
+			{
+				request: "crt.RunMaxPriceWebService",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Run web service button works...");
+
+					// get id from drive type lookup type object
+					var typeObject = await request.$context.PDS_UsrDriveType_08m3wq4;
+					var driveTypeId = "";
+					if (typeObject) {
+						driveTypeId = typeObject.value;
+					}
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+					/* Specify the URL to run web service method. */
+					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+					const transferName = "rest";
+					const serviceName = "YachtService";
+					const methodName = "GetMaxPriceByDriveTypeId";
+					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+					
+					//const endpoint = "http://localhost/D1_Studio/0/rest/YachtService/GetMaxPriceByDriveTypeId";
+					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+					var params = {
+						driveTypeId: driveTypeId
+					};
+					const response = await httpClientService.post(endpoint, params);
+					
+					console.log("response max price = " + response.body.GetMaxPriceByDriveTypeIdResult);
+					
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			}
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{
