@@ -3,6 +3,9 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Ticket price output page" />
+			<Item Name="LocalizableStrings.PageTitle_caption.Value" Value="Average ticket price data:" />
+			<Item Name="Parameters.1e670add-0646-8155-a80f-1206ae192e30.Caption" Value="Average ticket price, EUR" />
+			<Item Name="Parameters.397673e2-95a4-5110-8f5c-884760a275d2.Caption" Value="SQL Text" />
 		</Items>
 	</Group>
 </Resources>

@@ -29,6 +29,26 @@ namespace Terrasoft.Configuration
             decimal result = select.ExecuteScalar<decimal>();
             return result;
         }
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        public decimal GetAvgPriceByDriveTypeId(string driveTypeId)
+        {
+            if (string.IsNullOrEmpty(driveTypeId))
+            {
+                return -1;
+            }
+            Select select = new Select(UserConnection)
+                .Column(Func.Avg("UsrPrice"))
+                .From("UsrYacht")
+                .Where("UsrDriveTypeId").IsEqual(Column.Parameter(new Guid(driveTypeId)))
+                .And("UsrStatusId").IsEqual(Column.Parameter(new Guid("ef4c99ed-5a95-4731-b772-313128d516d9"))) // 1. Operational
+                as Select;
+            decimal result = select.ExecuteScalar<decimal>();
+            return result;
+        }
+
         [OperationContract]
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped,
             RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]

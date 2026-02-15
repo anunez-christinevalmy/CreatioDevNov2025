@@ -26,26 +26,27 @@
                 "UId": "3b4c5efb-ac6d-765a-ae7e-ac8f2433cb88",
                 "BRC1": {
                   "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleGroupCondition",
-                  "UId": "808c8289-bd0c-b886-ee34-5a48f0e4a7fa",
+                  "UId": "2887c0ad-04bb-d9e4-a7ba-7cbf33e303f9",
                   "BGC1": 1,
                   "BGC2": [
                     {
                       "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleCondition",
-                      "UId": "c5746dac-366d-45a9-46be-71d51c6b4699",
+                      "UId": "77265f41-e03b-d72b-ecc6-42be4f91113f",
                       "BCO1": {
                         "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleAttributeExpression",
-                        "UId": "685ac542-d9c1-aa9a-def2-900d04b23d34",
+                        "UId": "a1af7f21-3fc0-984f-6296-665ad3602440",
                         "BRE1": "Float2",
                         "BRE2": "AttributeValue",
                         "BRX1": "PDS_UsrPrice_vymige3"
                       },
                       "BCO2": {
-                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleValueExpression",
-                        "UId": "90f3534e-ed3d-7824-24cb-306a57d9c659",
+                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleSysSettingExpression",
+                        "UId": "0b1dcd9a-bbc8-2f1f-b1ed-56f68ac1e2f3",
                         "BRE1": "Float2",
-                        "BVE1": 1000.0
+                        "BRE2": "SysSetting",
+                        "BSS1": "MinPriceToRequireYachtComment"
                       },
-                      "BCO3": 7
+                      "BCO3": 8
                     }
                   ]
                 },
@@ -54,6 +55,11 @@
                     "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionShowElement",
                     "UId": "3d82cea4-abe9-7919-2fb2-549239547586",
                     "BRA4": "Comment"
+                  },
+                  {
+                    "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionRequiredElement",
+                    "UId": "db435868-5850-6f8e-7240-45fa2c361650",
+                    "BRA4": "Comment"
                   }
                 ]
               }
@@ -61,13 +67,13 @@
             "BR2": [
               {
                 "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "0d92fa79-b2c5-c346-77b0-e6bf5c18b006",
-                "BRT2": 2
+                "UId": "58d7b84f-689a-9437-aeea-5ba14df1f84a",
+                "BRT1": "PDS_UsrPrice_vymige3"
               },
               {
                 "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "8317fbe2-b5d9-ea0d-824c-246e52d4a24f",
-                "BRT1": "PDS_UsrPrice_vymige3"
+                "UId": "b4c8ab6e-b518-a93e-7c47-76537a39e67c",
+                "BRT2": 2
               }
             ],
             "BR3": "BusinessRule_804b20b"

@@ -19,11 +19,11 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_de83v4o_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_1vtrgps_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_0ahemqk_caption.Value" Value="Actions" />
-			<Item Name="LocalizableStrings.MenuItem_0tb49dz_caption.Value" Value="Start run calculate avg price" />
 			<Item Name="LocalizableStrings.MultiSelect_jw0ulka_label.Value" Value="Multi-select" />
-			<Item Name="LocalizableStrings.PassengersCountCannotBeLess.Value" Value="Passengers count cannot be less than 1." />
-			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50" />
+			<Item Name="LocalizableStrings.PassengersCountCannotBeLess.Value" Value="Passengers count must be greater than 1" />
+			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price per day, EUR must be greater than 300" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push me!" />
+			<Item Name="LocalizableStrings.RunCalcTicketPriceMenuItem_caption.Value" Value="Start run calculate avg price" />
 			<Item Name="LocalizableStrings.RunMaxPriceWebService_caption.Value" Value="Run max price web service" />
 		</Items>
 	</Group>

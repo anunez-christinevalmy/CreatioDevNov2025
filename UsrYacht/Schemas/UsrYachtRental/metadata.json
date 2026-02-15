@@ -18,6 +18,10 @@
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.JC1 []
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D38 true
 + MetaData.Schema.D2 {
   "UId": "af3c69ea-6ca2-f3ae-89cf-0d75961850da",
   "A2": "UsrCustomer",
@@ -78,7 +82,32 @@
   "E17": "UsrParentYachtId",
   "E18": "UsrParentYachtUsrName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","af3c69ea-6ca2-f3ae-89cf-0d75961850da","f087491d-764e-2c65-cfff-b671d1bd74ee","1c866776-2494-8381-2473-78acd1bf20c0","afec64ce-49ba-9976-fc3b-14503d15138e","fce64e03-5c56-bfdd-5f46-33697a5dc7ba"]
++ MetaData.Schema.D2 {
+  "UId": "22e918d7-29c4-622b-44de-684efcc02a88",
+  "A2": "UsrTotalPrice",
+  "A3": "5e5aa997-032d-4406-bc7e-94346732da3a",
+  "A4": "5e5aa997-032d-4406-bc7e-94346732da3a",
+  "A5": "e285e19b-8d0d-4117-8634-0451b1bab3ec",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
++ MetaData.Schema.D2 {
+  "UId": "1e0d755f-9e17-babb-e89b-f3aca773ab34",
+  "A2": "UsrManagerRental",
+  "A3": "5e5aa997-032d-4406-bc7e-94346732da3a",
+  "A4": "5e5aa997-032d-4406-bc7e-94346732da3a",
+  "A5": "e285e19b-8d0d-4117-8634-0451b1bab3ec",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "16be3651-8fe2-4159-8dd0-a803d4683dd3",
+  "E6": true,
+  "E20": true,
+  "E12": {
+    "FB1": 3,
+    "FB2": "4f367ca9-549b-4a1a-b64e-a40123f52ac0"
+  },
+  "E17": "UsrManagerRentalId",
+  "E18": "UsrManagerRentalName"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","af3c69ea-6ca2-f3ae-89cf-0d75961850da","f087491d-764e-2c65-cfff-b671d1bd74ee","1c866776-2494-8381-2473-78acd1bf20c0","afec64ce-49ba-9976-fc3b-14503d15138e","fce64e03-5c56-bfdd-5f46-33697a5dc7ba","22e918d7-29c4-622b-44de-684efcc02a88","1e0d755f-9e17-babb-e89b-f3aca773ab34"]
 = MetaData.Schema.D20.A2 "UsrYachtRentalEvents"
 = MetaData.Schema.D36.A3 "5e5aa997-032d-4406-bc7e-94346732da3a"
 = MetaData.Schema.D36.BS1 false

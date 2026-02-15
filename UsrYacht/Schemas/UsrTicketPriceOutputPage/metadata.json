@@ -1,6 +1,13 @@
 = MetaData.Schema.UId "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98"
 = MetaData.Schema.A2 "UsrTicketPriceOutputPage"
 = MetaData.Schema.A5 "e285e19b-8d0d-4117-8634-0451b1bab3ec"
++ MetaData.Schema.B2 {
+  "UId": "1e531317-67aa-a374-d211-e2abb1539334",
+  "A2": "PageTitle_caption",
+  "A3": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+  "A4": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+  "A5": "e285e19b-8d0d-4117-8634-0451b1bab3ec"
+}
 = MetaData.Schema.B2.["09d13380-5ba0-e839-0eb2-8c4de07ba379"].A4 "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98"
 = MetaData.Schema.B2.["09d13380-5ba0-e839-0eb2-8c4de07ba379"].A5 "e285e19b-8d0d-4117-8634-0451b1bab3ec"
 = MetaData.Schema.B2.["3e977072-67fa-588e-d554-1d5c45e71ae9"].A4 "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98"
@@ -19,12 +26,33 @@
 = MetaData.Schema.B2.["be578da5-5d7d-ab2f-1e20-3e60b2942dd8"].A5 "e285e19b-8d0d-4117-8634-0451b1bab3ec"
 = MetaData.Schema.B2.["bdd7993a-a255-b4d6-62d6-fe0785da6821"].A4 "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98"
 = MetaData.Schema.B2.["bdd7993a-a255-b4d6-62d6-fe0785da6821"].A5 "e285e19b-8d0d-4117-8634-0451b1bab3ec"
-~ MetaData.Schema.B2 ["09d13380-5ba0-e839-0eb2-8c4de07ba379","3e977072-67fa-588e-d554-1d5c45e71ae9","231defdf-a768-e23a-fb30-1af82d65f9f9","d6b949fc-ba7c-e706-6a88-0422133b6a4e","f978738d-bca4-04fb-a000-defd7acf82c4","0011a5bb-3302-742c-a621-c833f2ec8174","67995f5e-d70a-e2a3-5494-a22737ff9c44","be578da5-5d7d-ab2f-1e20-3e60b2942dd8","bdd7993a-a255-b4d6-62d6-fe0785da6821"]
+~ MetaData.Schema.B2 ["1e531317-67aa-a374-d211-e2abb1539334","09d13380-5ba0-e839-0eb2-8c4de07ba379","3e977072-67fa-588e-d554-1d5c45e71ae9","231defdf-a768-e23a-fb30-1af82d65f9f9","d6b949fc-ba7c-e706-6a88-0422133b6a4e","f978738d-bca4-04fb-a000-defd7acf82c4","0011a5bb-3302-742c-a621-c833f2ec8174","67995f5e-d70a-e2a3-5494-a22737ff9c44","be578da5-5d7d-ab2f-1e20-3e60b2942dd8","bdd7993a-a255-b4d6-62d6-fe0785da6821"]
 = MetaData.Schema.B6 "333c18ea-4bf8-4623-aa59-63d41000a488"
 = MetaData.Schema.B8 "8.3.1.4481"
 = MetaData.Schema.HD1 "27e1b215-163a-4b82-b0a6-9872a8dde6e4"
 + MetaData.Schema.HD15 1
-= MetaData.Schema.HD6 "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.ANGULAR_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},parameters:{{}},schemaVersion:0,optionalProperties:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});"
+= MetaData.Schema.HD6 "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.ANGULAR_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},parameters:{{}},schemaVersion:1,optionalProperties:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});"
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "397673e2-95a4-5110-8f5c-884760a275d2",
+  "A2": "UsrSqlText",
+  "A3": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+  "A4": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+  "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+  "L8": {},
+  "L11": false
+}
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "1e670add-0646-8155-a80f-1206ae192e30",
+  "A2": "UsrAvgPrice",
+  "A3": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+  "A4": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+  "L1": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+  "L8": {},
+  "L11": false
+}
+~ MetaData.Schema.HD11 ["397673e2-95a4-5110-8f5c-884760a275d2","1e670add-0646-8155-a80f-1206ae192e30"]
 - MetaData.Schema.B7
 - MetaData.Schema.HD12
 + MetaData.Schema.B7 false

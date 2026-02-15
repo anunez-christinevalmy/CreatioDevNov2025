@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Yacht rental modal page" />
+			<Item Name="LocalizableStrings.addRecord_3vsoifd_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_nz956p9_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.PageTitle_caption.Value" Value="Yacht Rental" />
 		</Items>

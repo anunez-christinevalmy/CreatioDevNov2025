@@ -7,7 +7,7 @@ define("Accounts_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "Input_lkv0hw5",
+				"name": "RegCode",
 				"values": {
 					"layoutConfig": {
 						"column": 1,

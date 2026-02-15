@@ -1,4 +1,4 @@
-define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -59,10 +59,10 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "MenuItem_0tb49dz",
+				"name": "RunCalcTicketPriceMenuItem",
 				"values": {
 					"type": "crt.MenuItem",
-					"caption": "#ResourceString(MenuItem_0tb49dz_caption)#",
+					"caption": "#ResourceString(RunCalcTicketPriceMenuItem_caption)#",
 					"visible": true,
 					"clicked": {
 						"request": "crt.RunBusinessProcessRequest",
@@ -89,7 +89,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"visible": true,
 					"icon": "sum-icon",
 					"clicked": {
-						"request": "crt.RunWebServiceRequest"
+						"request": "usr.RunMaxPriceWebService"
 					}
 				},
 				"parentName": "Button_lrsbchp",
@@ -162,12 +162,35 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "Price",
+				"name": "Captain",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"colSpan": 1,
 						"row": 3,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_UsrCaptain_ekvr027",
+					"control": "$PDS_UsrCaptain_ekvr027",
+					"placeholder": "",
+					"tooltip": "",
+					"readonly": false,
+					"multiline": false,
+					"labelPosition": "auto"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "Price",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 4,
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
@@ -180,7 +203,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -189,7 +212,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"layoutConfig": {
 						"column": 1,
 						"colSpan": 1,
-						"row": 4,
+						"row": 5,
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
@@ -203,36 +226,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 3
-			},
-			{
-				"operation": "insert",
-				"name": "DriveType",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"colSpan": 1,
-						"row": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrDriveType_08m3wq4",
-					"ariaLabel": "",
-					"isAddAllowed": true,
-					"showValueAsLink": false,
-					"labelPosition": "auto",
-					"controlActions": [],
-					"listActions": [],
-					"tooltip": "",
-					"control": "$PDS_UsrDriveType_08m3wq4",
-					"visible": true,
-					"readonly": false,
-					"placeholder": "",
-					"valueDetails": null
-				},
-				"parentName": "GeneralInfoTabContainer",
-				"propertyName": "items",
-				"index": 0
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -261,11 +255,40 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "DriveType",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrDriveType_08m3wq4",
+					"ariaLabel": "",
+					"isAddAllowed": true,
+					"showValueAsLink": false,
+					"labelPosition": "auto",
+					"controlActions": [],
+					"listActions": [],
+					"tooltip": "",
+					"control": "$PDS_UsrDriveType_08m3wq4",
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
 				"index": 1
 			},
 			{
 				"operation": "insert",
-				"name": "PassengersCount",
+				"name": "Length",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -273,13 +296,14 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"row": 2,
 						"rowSpan": 1
 					},
-					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrPassengersCount_wewu8j1",
-					"control": "$PDS_UsrPassengersCount_wewu8j1",
-					"readonly": false,
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_UsrLength_qkca6w2",
+					"control": "$PDS_UsrLength_qkca6w2",
 					"placeholder": "",
-					"labelPosition": "auto",
-					"tooltip": ""
+					"tooltip": "",
+					"readonly": false,
+					"multiline": false,
+					"labelPosition": "auto"
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -316,7 +340,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "CrewCount",
+				"name": "PassengersCount",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -325,8 +349,8 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrCrewCount_5gy5yg0",
-					"control": "$PDS_UsrCrewCount_5gy5yg0",
+					"label": "$Resources.Strings.PDS_UsrPassengersCount_wewu8j1",
+					"control": "$PDS_UsrPassengersCount_wewu8j1",
 					"readonly": false,
 					"placeholder": "",
 					"labelPosition": "auto",
@@ -363,7 +387,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "Country",
+				"name": "CrewCount",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -371,20 +395,13 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"row": 4,
 						"rowSpan": 1
 					},
-					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrCountry_fal7bwg",
-					"ariaLabel": "",
-					"isAddAllowed": true,
-					"showValueAsLink": false,
-					"labelPosition": "auto",
-					"controlActions": [],
-					"listActions": [],
-					"tooltip": "",
-					"control": "$PDS_UsrCountry_fal7bwg",
-					"valueDetails": null,
-					"visible": true,
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrCrewCount_5gy5yg0",
+					"control": "$PDS_UsrCrewCount_5gy5yg0",
 					"readonly": false,
-					"placeholder": ""
+					"placeholder": "",
+					"labelPosition": "auto",
+					"tooltip": ""
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -416,10 +433,39 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "City",
+				"name": "Country",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
+						"colSpan": 1,
+						"row": 5,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCountry_fal7bwg",
+					"ariaLabel": "",
+					"isAddAllowed": true,
+					"showValueAsLink": false,
+					"labelPosition": "auto",
+					"controlActions": [],
+					"listActions": [],
+					"tooltip": "",
+					"control": "$PDS_UsrCountry_fal7bwg",
+					"valueDetails": null,
+					"visible": true,
+					"readonly": false,
+					"placeholder": ""
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 8
+			},
+			{
+				"operation": "insert",
+				"name": "City",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
 						"colSpan": 1,
 						"row": 5,
 						"rowSpan": 1
@@ -441,7 +487,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 8
+				"index": 9
 			},
 			{
 				"operation": "insert",
@@ -779,7 +825,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
 								"params": {
-									"minValue": 50,
+									"minValue": 301,
 									"message": "#ResourceString(PriceCannotBeLess)#"
 								}
 							}
@@ -829,7 +875,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
 								"params": {
-									"minValue": 1,
+									"minValue": 2,
 									"message": "#ResourceString(PassengersCountCannotBeLess)#"
 								}
 							}
@@ -986,6 +1032,16 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					},
 					"MultiSelect_jw0ulka_List_Items_Predefined_Filter": {
 						"value": null
+					},
+					"PDS_UsrCaptain_ekvr027": {
+						"modelConfig": {
+							"path": "PDS.UsrCaptain"
+						}
+					},
+					"PDS_UsrLength_qkca6w2": {
+						"modelConfig": {
+							"path": "PDS.UsrLength"
+						}
 					}
 				}
 			},
@@ -1096,7 +1152,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 		        }
 		    },
 			{
-				request: "crt.RunMaxPriceWebService",
+				request: "usr.RunMaxPriceWebService",
 				/* Implementation of the custom query handler. */
 				handler: async (request, next) => {
 					console.log("Run web service button works...");

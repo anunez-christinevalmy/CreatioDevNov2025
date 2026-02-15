@@ -12,6 +12,8 @@
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.ActivityPriority.Caption" Value="Priority" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.ActivityPriority.DisplayValue" Value="ab96fa02-7fe6-df11-971b-001d60e938c6" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.ActivityResult.Caption" Value="Result of activity" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Value.11ef9b77-7610-4d75-b05f-465fec380f7d.Caption" Value="Close | CloseButton" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Value.e048de9c-8c57-4af7-8cb3-f66d585860a0.Caption" Value="Save | SaveButton" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.ClientUnitSchemaUId.Caption" Value="Module" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.ClientUnitSchemaUId.DisplayValue" Value="Ticket price output page | UsrTicketPriceOutputPage" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.CreateActivity.Caption" Value="Create activity" />
@@ -56,6 +58,10 @@
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Url.DisplayValue" Value="&quot;[Module]/[Page]/add&quot;" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UseCardProcessModule.Caption" Value="Use standard page generator" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UseCardProcessModule.DisplayValue" Value="false" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UsrAvgPrice.Caption" Value="Average ticket price, EUR" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UsrAvgPrice.DisplayValue" Value="[#AvgTicketPrice#]" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UsrSqlText.Caption" Value="SQL Text" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UsrSqlText.DisplayValue" Value="[#SqlText#]" />
 			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="Read Yacht" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />

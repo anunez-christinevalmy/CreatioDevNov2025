@@ -1184,9 +1184,42 @@
               "IL2": "916b22ca-aa60-467f-8f92-8c13d089fa95",
               "L1": "cffc4762-c5c7-44bc-8cc6-cb55aba6e06b",
               "L8": {
-                "GS2": "{\"$type\":\"Terrasoft.Core.Process.LocalizableParameterValuesList, Terrasoft.Core\",\"$values\":[]}",
+                "GS1": 1,
+                "GS2": "{\"$type\":\"Terrasoft.Core.Process.LocalizableParameterValuesList, Terrasoft.Core\",\"$values\":[{\"ItemUId\":\"e048de9c-8c57-4af7-8cb3-f66d585860a0\",\"Caption\":{\"isLczValue\":true},\"Name\":{\"value\":\"SaveButton\"},\"Id\":{\"value\":\"e048de9c-8c57-4af7-8cb3-f66d585860a0\"},\"Tag\":{\"value\":\"SaveButton_clicked\"},\"Event\":{\"value\":\"clicked\"},\"PerformClosePage\":{\"value\":\"True\"}},{\"ItemUId\":\"11ef9b77-7610-4d75-b05f-465fec380f7d\",\"Caption\":{\"isLczValue\":true},\"Name\":{\"value\":\"CloseButton\"},\"Id\":{\"value\":\"11ef9b77-7610-4d75-b05f-465fec380f7d\"},\"Tag\":{\"value\":\"CloseButton_clicked\"},\"Event\":{\"value\":\"clicked\"},\"PerformClosePage\":{\"value\":\"True\"}}]}",
                 "GS5": "333a186f-7b22-4134-8013-313535c09f1f"
               }
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "859ca843-e6a5-4a7a-a7d5-09a5addc3b83",
+              "A2": "UsrSqlText",
+              "A3": "333a186f-7b22-4134-8013-313535c09f1f",
+              "A4": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+              "IL2": "916b22ca-aa60-467f-8f92-8c13d089fa95",
+              "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+              "L8": {
+                "GS1": 3,
+                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{08007d22-4d3b-42e8-8639-fb6862084f56}]#]",
+                "GS5": "333a186f-7b22-4134-8013-313535c09f1f"
+              },
+              "L11": false,
+              "SourceParameterUId": "397673e2-95a4-5110-8f5c-884760a275d2"
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "f3cfa4ec-b89a-41b9-8046-3c87b96a3091",
+              "A2": "UsrAvgPrice",
+              "A3": "333a186f-7b22-4134-8013-313535c09f1f",
+              "A4": "fc2b35a9-7a6f-459e-bfa8-585dbca9bc98",
+              "IL2": "916b22ca-aa60-467f-8f92-8c13d089fa95",
+              "L1": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+              "L8": {
+                "GS1": 3,
+                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{88346f64-143d-4f16-bb62-97d5adbf68d5}]#]",
+                "GS5": "333a186f-7b22-4134-8013-313535c09f1f"
+              },
+              "L11": false,
+              "SourceParameterUId": "1e670add-0646-8155-a80f-1206ae192e30"
             },
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
@@ -1638,6 +1671,7 @@
                 "GS2": "7a0dc9cf-bca9-456a-a9eb-82f525c4d0b1",
                 "GS5": "333a186f-7b22-4134-8013-313535c09f1f"
               },
+              "L9": "2e155463-3ff1-4ccf-8584-4ec8d7233111",
               "L11": false
             }
           ],

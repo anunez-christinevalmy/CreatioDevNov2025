@@ -11,8 +11,17 @@ define("UsrYachtRentalFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 				}
 			},
 			{
+				"operation": "merge",
+				"name": "ContinueInOtherPageButton",
+				"values": {
+					"visible": true,
+					"color": "default",
+					"clickMode": "default"
+				}
+			},
+			{
 				"operation": "insert",
-				"name": "DateTimePicker_3b5nx9q",
+				"name": "StartDate",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -35,7 +44,7 @@ define("UsrYachtRentalFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 			},
 			{
 				"operation": "insert",
-				"name": "DateTimePicker_xeqnndr",
+				"name": "EndDate",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -58,7 +67,7 @@ define("UsrYachtRentalFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 			},
 			{
 				"operation": "insert",
-				"name": "ComboBox_34dxyyb",
+				"name": "Customer",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -94,18 +103,82 @@ define("UsrYachtRentalFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 						"params": {}
 					}
 				},
-				"parentName": "ComboBox_34dxyyb",
+				"parentName": "Customer",
 				"propertyName": "listActions",
 				"index": 0
 			},
 			{
 				"operation": "insert",
-				"name": "Input_uj5e3fr",
+				"name": "Manager",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"colSpan": 1,
 						"row": 4,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.UsrYachtRentalDS_UsrManagerRental_iblhvvr",
+					"ariaLabel": "",
+					"isAddAllowed": true,
+					"showValueAsLink": true,
+					"labelPosition": "above",
+					"controlActions": [],
+					"listActions": [],
+					"tooltip": "",
+					"control": "$UsrYachtRentalDS_UsrManagerRental_iblhvvr"
+				},
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "addRecord_3vsoifd",
+				"values": {
+					"code": "addRecord",
+					"type": "crt.ComboboxSearchTextAction",
+					"icon": "combobox-add-new",
+					"caption": "#ResourceString(addRecord_3vsoifd_caption)#",
+					"clicked": {
+						"request": "crt.CreateRecordFromLookupRequest",
+						"params": {}
+					}
+				},
+				"parentName": "Manager",
+				"propertyName": "listActions",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "TotalPrice",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 5,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.UsrYachtRentalDS_UsrTotalPrice_arlcjwm",
+					"control": "$UsrYachtRentalDS_UsrTotalPrice_arlcjwm",
+					"readonly": false,
+					"placeholder": "",
+					"labelPosition": "above",
+					"tooltip": ""
+				},
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "Comment",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 6,
 						"rowSpan": 1
 					},
 					"type": "crt.Input",
@@ -119,7 +192,7 @@ define("UsrYachtRentalFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 				},
 				"parentName": "MainContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 5
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -160,6 +233,29 @@ define("UsrYachtRentalFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 					"UsrYachtRentalDS_UsrComment_vhnx7oh": {
 						"modelConfig": {
 							"path": "UsrYachtRentalDS.UsrComment"
+						}
+					},
+					"UsrYachtRentalDS_UsrManagerRental_iblhvvr": {
+						"modelConfig": {
+							"path": "UsrYachtRentalDS.UsrManagerRental"
+						}
+					},
+					"UsrYachtRentalDS_UsrManagerRental_iblhvvr_List": {
+						"isCollection": true,
+						"modelConfig": {
+							"sortingConfig": {
+								"default": [
+									{
+										"columnName": "Name",
+										"direction": "asc"
+									}
+								]
+							}
+						}
+					},
+					"UsrYachtRentalDS_UsrTotalPrice_arlcjwm": {
+						"modelConfig": {
+							"path": "UsrYachtRentalDS.UsrTotalPrice"
 						}
 					}
 				}
